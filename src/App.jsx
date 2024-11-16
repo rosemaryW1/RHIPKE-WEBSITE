@@ -1,6 +1,7 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavbarComponent from './components/Navbar';
 import Footer from './components/Footer';
+import Home from './pages/Home'; 
 
 function App() {
   return (
@@ -9,11 +10,16 @@ function App() {
         width: '100%', 
         margin: 0,
         padding: 0,
-        overflowX: 'hidden' 
+        overflowX: 'hidden'
       }}>
         <NavbarComponent />
         <main>
-          {/* Your content */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/about" element={<About />} /> */}
+            {/* <Route path="/services" element={<Services />} /> */}
+            {/* <Route path="/contact" element={<Contact />} /> */}
+          </Routes>
         </main>
         <Footer />
       </div>
