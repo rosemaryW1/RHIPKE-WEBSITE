@@ -1,17 +1,28 @@
 import React from 'react';
 
+import homeArrow from '../assets/home-arrow.png';
+import homeBigspark from '../assets/home-bigspark.png';
+import homeMaskedDoctors from '../assets/home-maskeddoctors.jpg';
+import update1 from '../assets/home-latestupdate1.png';
+import update2 from '../assets/home-latestupdates2.png';
+import update3 from '../assets/home-latestupdate3.png';
+import update4 from '../assets/home-latestupdate4.png';
+import homePhones from '../assets/home-phones.png';
+
 function Home() {
   return (
     <div style={{ width: '100%', backgroundColor: '#fff' }}>
       {/* Hero Section with Phone Images */}
-      <section style={{ 
-        padding: '4rem 2rem',
-        background: '#f8f9fa'
-      }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <section style={{
+          padding: '4rem 2rem',
+          background: '#f8f9fa'
+        }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ width: '40%' }}>
+              <img src={homePhones} alt="Phone Mockups" style={{ maxWidth: '100%' }} />
+            </div>
             <div style={{ width: '50%' }}>
-              <h1 style={{ 
+              <h1 style={{
                 color: '#000',
                 fontSize: '2.5rem',
                 marginBottom: '1rem'
@@ -31,13 +42,8 @@ function Home() {
                 Learn More
               </button>
             </div>
-            <div style={{ width: '50%' }}>
-              <img src="/api/placeholder/400/600" alt="Phone Mockups" />
-            </div>
           </div>
-        </div>
-      </section>
-
+        </section>
       {/* Stats Section */}
       <section style={{ padding: '2rem' }}>
         <div style={{ 
@@ -48,16 +54,16 @@ function Home() {
           margin: '0 auto'
         }}>
           <div style={{ textAlign: 'center' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>+500</h2>
-            <p>End to End Solutions</p>
+            <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }}>+500</h2>
+            <p>User satisfaction</p>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>+40</h2>
-            <p>Project Examples</p>
+            <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }}>+40</h2>
+            <p>Project completed</p>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>+1</h2>
-            <p>Innovation Hub</p>
+            <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }}>+1</h2>
+            <p>years in existence</p>
           </div>
         </div>
       </section>
@@ -66,31 +72,46 @@ function Home() {
       <section style={{ padding: '2rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Strategy Section */}
-          <div style={{ marginBottom: '2rem' }}>
-            <h3 style={{ color: '#ff0000', marginBottom: '1rem' }}>
-              01. Strategy and Optimization
-            </h3>
-            <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              <div style={{ flex: 1 }}>
-                <p>Comprehensive analysis and strategic planning for optimal results...</p>
-                <button style={{
-                  backgroundColor: '#ff0000',
-                  color: 'white',
-                  padding: '0.5rem 1rem',
-                  border: 'none',
-                  borderRadius: '4px',
-                  marginTop: '1rem'
-                }}>
-                  Read More
-                </button>
+            
+            <div style={{ marginBottom: '2rem' }}>
+              <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start' }}> 
+                <img 
+                  src={homeArrow} 
+                  alt="Strategy and Optimization" 
+                  style={{ 
+                    width: '30%',
+                    borderRadius: '8px',
+                    objectFit: 'cover'
+                  }}
+                />
+                <div style={{ flex: 1 }}>
+                  <h3 style={{ 
+                    color: '#ff0000', 
+                    marginBottom: '1rem',
+                    textAlign: 'left'  
+                  }}>
+                    01. Strategy and Optimization
+                  </h3>
+                  <p style={{ marginBottom: '1rem', lineHeight: '1.6' }}>
+                    At RHIPFactory, we specialize in developing comprehensive strategic solutions 
+                    that drive business growth. Our team of experts analyzes market trends, 
+                    identifies opportunities, and creates optimized pathways for success. 
+                    We focus on delivering measurable results through data-driven strategies 
+                    and innovative approaches to business challenges.
+                  </p>
+                  <button style={{
+                    backgroundColor: '#002C54',
+                    color: 'white',
+                    padding: '0.5rem 1rem',
+                    border: 'none',
+                    borderRadius: '4px',
+                    marginTop: '1rem'
+                  }}>
+                    Read More
+                  </button>
+                </div>
               </div>
-              <img 
-                src="/api/placeholder/400/300" 
-                alt="Strategy" 
-                style={{ width: '50%', borderRadius: '8px' }}
-              />
             </div>
-          </div>
 
           {/* Technology Section */}
           <div style={{ marginBottom: '2rem' }}>
@@ -99,9 +120,12 @@ function Home() {
             </h3>
             <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
               <div style={{ flex: 1 }}>
-                <p>Cutting-edge technological solutions for modern challenges...</p>
+                <p>Leveraging cutting-edge technology, we create innovative solutions 
+                    that transform businesses. Our team combines technical expertise 
+                    with creative thinking to deliver state-of-the-art applications 
+                    and systems that drive digital transformation and growth.</p>
                 <button style={{
-                  backgroundColor: '#ff0000',
+                  backgroundColor: '#002C54',
                   color: 'white',
                   padding: '0.5rem 1rem',
                   border: 'none',
@@ -112,74 +136,135 @@ function Home() {
                 </button>
               </div>
               <img 
-                src="/api/placeholder/400/300" 
-                alt="Technology" 
-                style={{ width: '50%', borderRadius: '8px' }}
+                src={homeBigspark} 
+                alt="Technology and Innovation" 
+                style={{ 
+                  width: '30%', 
+                  borderRadius: '8px',
+                  objectFit: 'cover'
+                }}
               />
             </div>
           </div>
 
           {/* Manufacturing Section */}
           <div style={{ marginBottom: '2rem' }}>
-            <h3 style={{ color: '#ff0000', marginBottom: '1rem' }}>
-              03. Manufacturing Infrastructure
-            </h3>
-            <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              <div style={{ flex: 1 }}>
-                <p>Advanced manufacturing solutions for industrial needs...</p>
-                <button style={{
-                  backgroundColor: '#ff0000',
-                  color: 'white',
-                  padding: '0.5rem 1rem',
-                  border: 'none',
-                  borderRadius: '4px',
-                  marginTop: '1rem'
-                }}>
-                  Read More
-                </button>
+              <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start' }}> 
+                <img 
+                  src={homeMaskedDoctors} 
+                  alt="Groundbreaking infrastructure" 
+                  style={{ 
+                    width: '30%',
+                    borderRadius: '8px',
+                    objectFit: 'cover'
+                  }}
+                />
+                <div style={{ flex: 1 }}>
+                  <h3 style={{ 
+                    color: '#ff0000', 
+                    marginBottom: '1rem',
+                    textAlign: 'left'  
+                  }}>
+                    03. Groundbreaking Infrastructure
+                  </h3>
+                  <p style={{ marginBottom: '1rem', lineHeight: '1.6' }}>
+                    At RHIPFactory, we specialize in developing comprehensive strategic solutions 
+                    that drive business growth. Our team of experts analyzes market trends, 
+                    identifies opportunities, and creates optimized pathways for success. 
+                    We focus on delivering measurable results through data-driven strategies 
+                    and innovative approaches to business challenges.
+                  </p>
+                  <button style={{
+                    backgroundColor: '#002C54',
+                    color: 'white',
+                    padding: '0.5rem 1rem',
+                    border: 'none',
+                    borderRadius: '4px',
+                    marginTop: '1rem'
+                  }}>
+                    Read More
+                  </button>
+                </div>
               </div>
-              <img 
-                src="/api/placeholder/400/300" 
-                alt="Manufacturing" 
-                style={{ width: '50%', borderRadius: '8px' }}
-              />
             </div>
-          </div>
         </div>
       </section>
 
       {/* Latest Updates Section */}
       <section style={{ 
-        padding: '2rem',
-        backgroundColor: '#f8f9fa'
-      }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{ marginBottom: '2rem' }}>Latest Updates</h2>
-          <div style={{ 
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: '1rem'
-          }}>
-            {[1, 2, 3, 4].map((item) => (
-              <div key={item} style={{ 
+          padding: '2rem',
+          backgroundColor: '#f8f9fa'
+        }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <h2 style={{ marginBottom: '2rem' }}>Latest Updates</h2>
+            <div style={{ 
+              display: 'grid',
+              gridTemplateColumns: 'repeat(4, 1fr)',
+              gap: '1rem'
+            }}>
+              <div style={{ 
                 backgroundColor: 'white',
                 borderRadius: '8px',
                 overflow: 'hidden'
               }}>
                 <img 
-                  src={`/api/placeholder/300/200`} 
-                  alt={`Update ${item}`}
+                  src={update1}
+                  alt="Update 1"
                   style={{ width: '100%', height: '150px', objectFit: 'cover' }}
                 />
                 <div style={{ padding: '1rem' }}>
-                  <h4>Update Title</h4>
-                  <p>Short description...</p>
+                  <h4 style={{color: '#ff0000'}}>BuildHealth4Africa Hackathon</h4>
+                  <p>Short description for Update 1...</p>
                 </div>
               </div>
-            ))}
+              <div style={{ 
+                backgroundColor: 'white',
+                borderRadius: '8px',
+                overflow: 'hidden'
+              }}>
+                <img 
+                  src={update2}
+                  alt="Innovation in Africa"
+                  style={{ width: '100%', height: '150px', objectFit: 'cover' }}
+                />
+                <div style={{ padding: '1rem' }}>
+                  <h4 style={{color: '#ff0000'}}>Innovation in Africa</h4>
+                  <p>Short description for Update 2...</p>
+                </div>
+              </div>
+              <div style={{ 
+                backgroundColor: 'white',
+                borderRadius: '8px',
+                overflow: 'hidden'
+              }}>
+                <img 
+                  src={update3}
+                  alt="Update 3"
+                  style={{ width: '100%', height: '150px', objectFit: 'cover' }}
+                />
+                <div style={{ padding: '1rem' }}>
+                  <h4 style={{color: '#ff0000'}}>Connected Africa Summit 2024</h4>
+                  <p>Short description for Update 3...</p>
+                </div>
+              </div>
+              <div style={{ 
+                backgroundColor: 'white',
+                borderRadius: '8px',
+                overflow: 'hidden'
+              }}>
+                <img 
+                  src={update4}
+                  alt="Update 4"
+                  style={{ width: '100%', height: '150px', objectFit: 'cover' }}
+                />
+                <div style={{ padding: '1rem' }}>
+                  <h4 style={{color: '#ff0000'}}>Connected Africa Summit 2024</h4>
+                  <p>Short description for Update 4...</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Newsletter Section */}
       <section style={{ 
